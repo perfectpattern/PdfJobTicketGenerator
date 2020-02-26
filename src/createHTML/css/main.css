@@ -1,0 +1,478 @@
+html{
+	font-family: Arial;
+	font-size: 16px;
+}
+
+#page {
+	position: relative;
+	-width: 715px;
+	-min-height: 1047px;
+}
+
+.doublePage {
+	height: 2094px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.logo {
+	height: 20px;
+}
+
+.title {
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin: 0px 0 5px 0;
+	padding-top: 10px;
+}
+
+.subtitle {
+	font-size: 0.7rem;
+	color: #555;
+	font-weight: normal;
+	margin: 0px 0 40px 0;
+}
+
+.chapter {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	border-bottom: solid 2px rgb(68,114,196);
+	color: rgb(68,114,196);
+	margin-top: 20px;
+	margin-bottom: 20px
+}
+
+.paperType-wrapper {
+	text-align: center;
+	font-size: 0.9rem;
+	margin: 10px 0 10px 0;
+	color: #333
+}
+
+.footer {
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	font-size: 0.7rem;
+	color: #333
+}
+
+.footer.page1 {
+	top: 1027px;
+}
+
+.footer.page2 {
+	top: 1410px;
+}
+
+.footer * {
+	display: inline-block;
+	line-height: 20px;
+}
+
+.footer *.left {
+	float: left;
+}
+
+.footer *.right {
+	float: right;
+}
+
+.footer *.centered {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.top-right-piles-wrapper {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 65px;
+}
+
+.top-right-piles-wrapper .pile {
+	position: relative;
+	margin-left: 10px;
+	float: right;
+	text-align: center;
+	width: 120px;
+	height: 100%;
+	border: solid 1px #555;
+}
+
+.top-right-piles-wrapper .pile.duedate {
+	border-color: rgb(68, 114, 196);
+	background: rgba(68, 114, 196, 0.1);
+	color: rgb(68, 114, 196)
+}
+
+.top-right-piles-wrapper .pile .value {
+	text-align: center;
+	margin-top: 14px;
+	margin-bottom: 5px;
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.top-right-piles-wrapper .pile .key {
+	font-size: 0.8rem;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+table.table-data {
+	width: 100%;
+	border-collapse: collapse;
+	color: #555;
+	font-size: 0.7rem;
+}
+
+table.table-data td {
+	border: solid 1px #555;
+	padding: 5px;
+}
+
+table.table-data tr:first-child td {
+	font-weight: 600;
+	background: #f1f1f1;
+	color: #333;
+}
+
+.table-legend {
+	font-size: 0.6rem;
+	text-align: right;
+	color: #333;
+	margin: 5px 0 5px 0;
+}
+
+table.table-data tr:not(:first-child) td {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.tableWrapper.products {
+	padding-bottom: 25px;
+}
+
+table.print-plan {
+	border-collapse: collapse;
+	color: #555;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+table.print-plan td {
+	margin: 0;
+	padding: 0;
+	font-size: 0.6rem;
+}
+
+table.print-plan td.pile-container {
+	width: 80px
+}
+
+table.print-plan td.arrow-container {
+	width: 28px;
+}
+
+table.print-plan .arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-bottom: 28px solid transparent;
+	border-left: 28px solid #555;
+	position: relative;
+	z-index: -1;
+}
+
+table.print-plan .arrow-right-inner {
+	width: 0;
+	position: absolute;
+	left: -29px;
+	top: -25px;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-bottom: 28px solid transparent;
+	border-left: 28px solid #f1f1f1;
+}
+
+table.print-plan .arrow-left {
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-bottom: 28px solid transparent;
+	border-right: 28px solid #555;
+	position: relative;
+	z-index: -1;
+}
+
+table.print-plan .arrow-left-inner {
+	width: 0;
+	position: absolute;
+	left: 1px;
+	top: -25px;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-bottom: 28px solid transparent;
+	border-right: 28px solid #f1f1f1;
+}
+
+table.print-plan div.pile {
+	border: solid 1px grey;
+	background: #f1f1f1;
+	width: 100%;
+	height: 53px;
+}
+
+table.print-plan div.pile.left {
+	border-right: none;
+}
+
+table.print-plan div.pile.right {
+	border-left: none;
+}
+
+table.print-plan div.pile.right>div {
+	margin-left: -10px;
+}
+
+table.print-plan div.pile.left>div {
+	margin-right: -10px;
+	z-index: 1;
+}
+
+table.print-plan div.pile div.value {
+	text-align: center;
+	margin-top: 14px;
+	margin-bottom: 5px;
+	font-weight: 600;
+	font-size: 0.7rem
+}
+
+table.print-plan div.pile div.key {
+	font-size: 0.6rem;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 10px
+}
+
+table.print-plan td.offset {
+	width: 10px
+}
+
+table.print-plan td.time>div {
+	margin-left: -10px
+}
+
+table.print-plan td.step-left {
+	border-left: solid 1px #555;
+	padding: 0 5px;
+	;
+}
+
+table.print-plan td.step-left.nopadding {
+	padding: 0;
+}
+
+table.print-plan td.line{
+	border-bottom: solid 1px #555;
+}
+
+table.print-plan td.printrun {
+	font-weight: 600
+}
+
+.previewWrapper {
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHUlEQVQYV2NkwAIYcQouXLjwf3x8PFwBbpXoRgAA3ywEBuziwTwAAAAASUVORK5CYII=) repeat;
+	position: relative;
+	padding: 20px;
+	padding-bottom: 20px;
+	border: solid 1px #ddd;
+}
+
+.schedule_gangJobInfo_FormViewer {
+	position: relative;
+	margin: auto;
+}
+
+.schedule_gangJobInfo_FormViewer .sheet {
+	position: absolute;
+	transform: translateX(-50%) translateY(-50%);
+	left: 50%;
+	top: 50%;
+	background: #fbfbfb;
+	border: solid 1px #999;
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement {
+	position: absolute;
+	background-color: #6881b2;
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature {
+	text-align: center;
+	background-color: rgba(215, 215, 215, 0.7);
+	overflow: hidden;
+	position: absolute;
+	font-weight: bold;
+	z-index: 1;
+	left: 50%;
+	bottom: 50%;
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .binderySignatureTrimFormat {
+	background-color: #b7c6c9;
+	position: absolute;
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement.rotation_zero .binderySignature {
+	transform: translateX(-50%) translateY(50%) rotateZ(0);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement.rotation_cc90 .binderySignature {
+	transform: translateX(-50%) translateY(50%) rotateZ(-90deg);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement.rotation_cc180 .binderySignature {
+	transform: translateX(-50%) translateY(50%) rotateZ(-180deg);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement.rotation_cc270 .binderySignature {
+	transform: translateX(-50%) translateY(50%) rotateZ(-270deg);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement.rotation_zero.rotation_flip .binderySignature {
+	transform: translateX(-50%) translateY(50%) rotateX(180deg) rotateZ(0);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement.rotation_cc90.rotation_flip .binderySignature {
+	transform: translateX(-50%) translateY(50%) rotateX(180deg) rotateZ(-90deg);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement.rotation_cc180.rotation_flip .binderySignature {
+	transform: translateX(-50%) translateY(50%) rotateX(180deg) rotateZ(-180deg);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement.rotation_cc270.rotation_flip .binderySignature {
+	transform: translateX(-50%) translateY(50%) rotateX(180deg) rotateZ(-270deg);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .labelingWrapper {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .labelingWrapper .id {
+	position: relative;
+	z-index: 1;
+	white-space: nowrap;
+	color: #333;
+	font-weight: normal;
+}
+
+;
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .labelingWrapper .number {
+	position: relative;
+	z-index: 1;
+	white-space: nowrap;
+	color: #333;
+	margin-bottom: 3px;
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement.rotation_flip .binderySignature .labelingWrapper .number {
+	color: #838383;
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .rotationMarker {
+	background-color: #333;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement.rotation_flip .binderySignature .rotationMarker {
+	background-color: #999;
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .bottomRightMarker {
+	border-bottom: solid 2px #444;
+	border-right: solid 2px #444;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement.rotation_flip .binderySignature .bottomRightMarker {
+	border-color: rgb(153, 153, 153);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .thumbnail {
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: red;
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .thumbnail.rotation_zero {
+	transform: translate(-50%, 50%);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .thumbnail.rotation_cc180 {
+	transform: translate(-50%, 50%) rotateZ(-180deg);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .thumbnail.rotation_cc90 {
+	transform: translate(-50%, 50%) rotateZ(-90deg);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .thumbnail.rotation_cc270 {
+	transform: translate(-50%, 50%) rotateZ(-270deg);
+}
+
+.schedule_gangJobInfo_FormViewer .binderySignaturePlacement .binderySignature .requirementConstraintRectangle {
+	position: absolute;
+	background-color: #28CC00;
+}
+
+.schedule_gangJobInfo_FormViewer .reservedSpacePlacement {
+	position: absolute;
+	background-color: #ffc800;
+	box-shadow: inset 0px 0px 0px 1px #c09600;
+}
+
+.schedule_gangJobInfo_FormViewer .templateRectangle {
+	position: absolute;
+	background-color: darkturquoise;
+}
+
+.schedule_gangJobInfo_FormViewer .startConstraintRectangle {
+	position: absolute;
+	background-color: slategray;
+}
+
+.schedule_gangJobInfo_FormViewer .startConstraintRectangle.SmartcutStartConstraintRectangle {
+	position: absolute;
+	background-color: navy;
+}
+
+.schedule_gangJobInfo_FormViewer .startConstraintRectangle.RequirementStartConstraintRectangle {
+	position: absolute;
+	background-color: #1A7D00;
+}
+
+.schedule_gangJobInfo_FormViewer .startConstraintRectangle.OverlappingStartConstraintRectangle {
+	position: absolute;
+	background-color: #7f1a1a;
+}
